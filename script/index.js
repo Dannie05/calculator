@@ -51,7 +51,8 @@ clearScreen.addEventListener('click', () => {
     answer.classList.add('hidden');
   }
 
-})
+});
+
 document.addEventListener('keypress', (e) => {
   // console.log(e.code);
   switch (e.code) {
@@ -99,6 +100,10 @@ document.addEventListener('keypress', (e) => {
       display.value += '';
       break;
   }
+});
+
+squareRoot.addEventListener('dblclick', ()=>{
+  console.log('double-clicked');
 })
 
 

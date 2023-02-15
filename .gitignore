@@ -3,3 +3,4 @@
 tailwind.config.js
 package-lock.json
 package.json
+/script/jquery.js

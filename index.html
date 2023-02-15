@@ -8,17 +8,16 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <!-- <link rel="stylesheet" href="./dist/output.css" /> -->
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="./dist/output.css" />
   </head>
   <body>
-    <div class=" min-w-full h-screen flex items-center justify-center box">
-      <div class="calculator bg-[#3a4452] p-5 rounded-md form ">
+    <div class="box min-w-full h-screen flex items-center justify-center">
+      <div class="calculator p-5 rounded-md">
         <form action="">
-          <div class="flex justify-end my-5 mx-0">
-            <span class="text-white uppercase text-2xl hidden answer pb-6">ans</span>
+          <div class="flex justify-end my-5 mx-0 pointer-events-none content">
+            <span class="text-white uppercase text-2xl hidden answer pb-6">ans <br>=</span>
             <input
-            style="font-size: 3rem; color: aqua; overflow: hidden;"
               type="text"
               name="display"
               class="text-right flex-1 shadow-none display"

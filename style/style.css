@@ -15,21 +15,61 @@
     font-family: source;
 }
 
-:root{
-    --clr-root:#04d9ff;
-    --clr-bg:#00051d;
-    --clr-bg2:#030613;
-    --clr-txt:hwb(300 51% 7%);
-    --clr-linear:linear-gradient(to right, blue, green);
+:root {
+    --clr-root: #04d9ff;
+    --clr-bg: #00051d;
+    --clr-bg2: #030613;
+    --clr-txt: hwb(300 51% 7%);
+    --clr-linear: linear-gradient(to right, blue, green);
 }
-.box{
+
+.box {
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: var(--clr-bg2);
 }
-.calculator{
+
+.calculator {
     background: var(--clr-bg);
     border: 2px ridge var(--clr-root);
     border-radius: 20px;
-    
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+    pointer-events: none;
+    position: relative;
+}
+
+form .content span {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 24px;
+    /* display: none; */
+    position: absolute;
+    top: -20%;
+}
+.hidden{
+    display: none;
+}
+
+form .content .display {
+    /* background: red; */
+    font-size: 3rem;
+    color: aqua;
+    /* overflow: hidden; */
+    pointer-events: none;
+    border: none;
+    flex: 1 1 0%;
+    text-align: right;
 }
 
 .calculator form input,
@@ -45,6 +85,7 @@
     font-size: large;
     color: azure;
     cursor: pointer;
+    border: 2px ridge var(--clr-root);
 }
 
 input[type='text'] {
@@ -57,20 +98,15 @@ form button.equal {
     transition: all .2s ease-in-out;
 }
 
-form button.equal:active,.calculator form input:active {
+form button.equal:active,
+.calculator form input:active {
     opacity: 0;
-}
-
-.result {
-    font-family: radioland;
-    font-size: 1.82rem;
-    color: aqua;
 }
 
 @media screen and (width < 300px) {
     .calculator {
         padding-left: 10px !important;
-       
+
     }
 
     .calculator form input,
@@ -78,7 +114,7 @@ form button.equal:active,.calculator form input:active {
         width: 45px !important;
     }
 
-    .display{
+    .display {
         font-size: 1.3rem !important;
         padding-right: 10px !important;
     }
