@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator | Home</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body>
+    <div class=" min-w-full h-screen flex items-center justify-center box">
+      <div class="calculator bg-[#3a4452] p-5 rounded-md form ">
+        <form action="">
+          <div class="flex justify-end my-5 mx-0">
+            <span class="text-white uppercase text-2xl hidden answer pb-6">ans</span>
+            <input
+            style="font-size: 3rem; color: aqua; overflow: hidden;"
+              type="text"
+              name="display"
+              class="text-right flex-1 shadow-none display"
+            />
+          </div>
+
+          <div>
+            <!-- <input type="button" value="AC" /> -->
+            <button type="button" class="clear-screen">AC</button>
+            <!-- <input type="button" value="DE" /> -->
+            <button type="button" class="delete-one" >DE</button>
+            <input type="button" value="." />
+            <input type="button" value="/" />
+          </div>
+
+          <div>
+            <input
+              type="button"
+              value="7"
+              class="button"
+            />
+            <input type="button" value="8" class="button btn-8" />
+            <input type="button" value="9" class="button" />
+            <input type="button" value="*" />
+          </div>
+
+          <div>
+            <input type="button" value="4" onclick="answer.classlist.add('hidden')" />
+            <input type="button" value="5" />
+            <input type="button" value="6" />
+            <input type="button" value="-" />
+          </div>
+
+          <div>
+            <input type="button" value="1" />
+            <input type="button" value="2" />
+            <input type="button" value="3" />
+            <input type="button" value="+" />
+          </div>
+
+          <div>
+            <input type="button" value="00" />
+            <input type="button" value="0" />
+            <!-- <input type="button" value="=" class="equal" /> -->
+            <button type="button" class="squareRoot">sqr</button>
+            <button type="button" class="equal">=</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script/index.js"></script>
+  </body>
+</html>

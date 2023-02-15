@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: source;
+    src: url(../font/SourceSansPro-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: source;
+}
+
+:root{
+    --clr-root:#04d9ff;
+    --clr-bg:#00051d;
+    --clr-bg2:#030613;
+    --clr-txt:hwb(300 51% 7%);
+    --clr-linear:linear-gradient(to right, blue, green);
+}
+.box{
+    background: var(--clr-bg2);
+}
+.calculator{
+    background: var(--clr-bg);
+    border: 2px ridge var(--clr-root);
+    border-radius: 20px;
+    
+}
+
+.calculator form input,
+.calculator form button {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: -8px -8px 15px rgb(255, 255, 255, 0.1), 5px 5px 15px rgb(0, 0, 0, 0.3);
+    background: transparent;
+    font-size: large;
+    color: azure;
+    cursor: pointer;
+}
+
+input[type='text'] {
+    box-shadow: none !important;
+}
+
+form button.equal {
+    background: #34eb349c !important;
+    /* width: 8rem !important; */
+    transition: all .2s ease-in-out;
+}
+
+form button.equal:active,.calculator form input:active {
+    opacity: 0;
+}
+
+.result {
+    font-family: radioland;
+    font-size: 1.82rem;
+    color: aqua;
+}
+
+@media screen and (width < 300px) {
+    .calculator {
+        padding-left: 10px !important;
+       
+    }
+
+    .calculator form input,
+    .calculator form button {
+        width: 45px !important;
+    }
+
+    .display{
+        font-size: 1.3rem !important;
+        padding-right: 10px !important;
+    }
+
+
+}
