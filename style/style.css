@@ -103,7 +103,7 @@ form button.equal:active,
     opacity: 0;
 }
 
-@media screen and (width < 300px) {
+@media screen and (width < 340px) {
     .calculator {
         padding-left: 10px !important;
 
